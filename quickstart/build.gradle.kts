@@ -7,7 +7,7 @@ plugins {
     kotlin("plugin.spring") version Versions.Kotlin.stdlib
 }
 
-group = "ro.razvan.spring"
+group = "ro.razvan.spring.quickstart"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_11
 
@@ -23,6 +23,7 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
     }
+    testImplementation(Libs.AssertJ.core)
 }
 
 tasks.withType<Test> {
